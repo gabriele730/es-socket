@@ -10,14 +10,15 @@ public class server {
         //apertura porta da parte del server 
         
        try (ServerSocket server = new ServerSocket(5000)) {
-   System.out.println(" client in ascolto ");
+    System.out.println("Server in ascolto sulla porta 5000..."); // 1. Il server si mette in ascolto
 
-        Socket socket = server.accept();
+    Socket socket = server.accept(); // 2. Il server si ferma qui e aspetta il client
+    
+    // 3. Questa riga verrà stampata SOLO quando il client si connette davvero:
+    System.out.println("Connessione accettata da un client!"); 
 
-     
-       } catch (IOException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-       }
+} catch (IOException e) {
+    e.printStackTrace();
+}
     }
 }

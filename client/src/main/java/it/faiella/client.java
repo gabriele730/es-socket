@@ -6,12 +6,7 @@ import java.net.Socket;
 
 public class client {
     public static void main(String[] args) {
-        try (ServerSocket server = new ServerSocket(5000)) {
-   System.out.println(" client in ascolto ");
-
-        Socket socket = server.accept();
-
-     
+       try (Socket sock = new Socket("localhost", 5000)) {
        } catch (IOException e) {
         // TODO Auto-generated catch block
         e.printStackTrace();
