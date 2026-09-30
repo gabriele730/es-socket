@@ -20,7 +20,7 @@ public class server {
     // 3. Questa riga verrà stampata SOLO quando il client si connette davvero:
     System.out.println("Connessione accettata da un client!"); 
 
- // Stream per leggere il messaggio dal client
+    // Stream per leggere il messaggio dal client
            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
            // Stream per inviare la risposta al client
            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
